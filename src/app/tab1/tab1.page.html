@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card routerLink = "/activity-detail" button *ngFor="let activity of (activityList | async)">
+    <ion-img [src]="activity.cropped"></ion-img>
+    <ion-card-header>
+      <ion-label>{{activity.name}}</ion-label>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
